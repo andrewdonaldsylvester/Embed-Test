@@ -5,12 +5,13 @@
       const urlParams = new URLSearchParams(queryString);
       const title_var = urlParams.get('title'); 
       
-      let link = document.createElement('meta');
-      link.setAttribute('property', 'og:title');
-      link.content = title_var;
-      document.getElementsByTagName('head')[0].appendChild(link);
+//       let link = document.createElement('meta');
+//       link.setAttribute('property', 'og:title');
+//       link.content = title_var;
+//       document.getElementsByTagName('head')[0].appendChild(link);
     </script>
     
+    <meta proprety="og:title" content="helli"/>
     <meta proprety="og:image" content="https://ogp.me/logo.png"/>
   </head>
 </html>
