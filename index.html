@@ -8,8 +8,8 @@
       console.log(title_var);
       
       
-      appendHtml(document.head, `<meta property="og:title" content="${title_var}"/>`);
-      appendHtml(document.body, `<div> ${title_var} </div>`);
+      document.head.append(`<meta property="og:title" content="${title_var}"/>`);
+      document.body.append(`<div> ${title_var} </div>`);
       
     </script>
   </head>
