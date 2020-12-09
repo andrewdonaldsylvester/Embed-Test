@@ -1,6 +1,13 @@
 <html>
 
   <head>
+    <script>
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const code = urlParams.get('code'); 
+      console.log(code);
+    </script>
+    
     <meta property="og:title" content="opopop"/>
     <meta property="og:audio" content="https://example.com/bond/theme.mp3" />
     <meta property="og:description" 
