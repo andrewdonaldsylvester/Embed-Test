@@ -7,15 +7,10 @@
       const title_var = urlParams.get('title'); 
       console.log(title_var);
       
-      const title_meta = document.creatElement('meta');
-      title_meta.property = "og:title";
-      title_meta.content = title_var;
       
-      const head = document.head;
-      head.appendChild(title_meta);
+      appendHtml(document.head, `<meta property="og:title" content="${title_var}"/>`);
+      appendHtml(document.body, `<div> ${title_var} </div>`);
       
-      const body = document.body;
-      body.appendChild(title_meta);
     </script>
   </head>
   
