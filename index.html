@@ -5,11 +5,17 @@
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
       const title_var = urlParams.get('title'); 
+      
+      let title_meta = document.createElement('meta');
+      title_meta.property = "og:title";
+      title_meta = title_var;
+      
       console.log(title_var);
+      console.log(title_meta);
       
       
-      document.head.append(`<meta property="og:title" content="${title_var}"/>`);
-      document.body.append(`<div> ${title_var} </div>`);
+      //document.head.append(`<meta property="og:title" content="${title_var}"/>`);
+      //document.body.append(`<div> ${title_var} </div>`);
       
     </script>
   </head>
