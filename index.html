@@ -1,0 +1,35 @@
+<?php
+
+$params = array();
+if(count($_GET) > 0) {
+    $params = $_GET;
+} else {
+    $params = $_POST;
+}
+// defaults
+if($params['type'] == "") $params['type'] = "restaurant";
+if($params['locale'] == "") $params['locale'] = "en_US";
+if($params['title'] == "") $params['title'] = "default title";
+if($params['image'] == "") $params['image'] = "thumb";
+if($params['description'] == "") $params['description'] = "default description";
+
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# MY_APP_NAME_SPACE: http://ogp.me/ns/fb/MY_APP_NAME_SPACE#">
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+        <!-- Open Graph meta tags -->
+        <meta property="fb:app_id" content="MY_APP_ID" />
+        <meta property="og:site_name" content="meta site name"/>
+        <meta property="og:url" content="http://URL/index.php?type=<?php echo $params['type']; ?>&locale=<?php echo $params['locale']; ?>&title=<?php echo $params['title']; ?>&image=<?php echo $params['image']; ?>&description=<?php echo $params['description']; ?>"/>
+        <meta property="og:type" content="MY_APP_NAME_SPACE:<?php echo $params['type']; ?>"/>
+        <meta property="og:locale" content="<?php echo $params['locale']; ?>"/>
+        <meta property="og:title" content="<?php echo $params['title']; ?>"/>
+        <meta property="og:image" content="http://URL/img/<?php echo $params['image']; ?>.png"/>
+        <meta property="og:description" content="<?php echo $params['description']; ?>"/>
+
+    </head>
+</html>
