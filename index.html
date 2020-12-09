@@ -4,11 +4,19 @@
     <script>
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
-      const code = urlParams.get('code'); 
-      console.log(code);
+      const title_var = urlParams.get('title'); 
+      console.log(title_var);
+      
+      const title_meta = document.creatElement('meta');
+      title_meta.property = "og:title";
+      title_meta.content = title_var;
+      
+      const head = document.head;
+      
+      head.appendChild(title_meta);
     </script>
     
-    <meta property="og:title" content="opopop"/>
+    
     <meta property="og:audio" content="https://example.com/bond/theme.mp3" />
     <meta property="og:description" 
     content="Sean Connery found fame and fortune as the
